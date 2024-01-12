@@ -138,7 +138,7 @@ def game_over():
 
 
 window = Tk()
-window.title("GFG Snake game ")
+window.title(" Snake game ")
 
 
 score = 0
