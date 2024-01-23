@@ -4,14 +4,14 @@ from tkinter import *
 import random
 
 # Initialising Dimensions of Game
-WIDTH = 500
-HEIGHT = 500
-SPEED = 200
+WIDTH = 750
+HEIGHT = 750
+SPEED = 150
 SPACE_SIZE = 20
-BODY_SIZE = 2
+BODY_SIZE = 3
 SNAKE = "#00FF00"
-FOOD = "#FFFFFF"
-BACKGROUND = "#000000"
+FOOD = "#0000FF"
+BACKGROUND = "#FFFFFF"
 
 # Class to design the snake
 class Snake:
@@ -181,4 +181,3 @@ food = Food()
 next_turn(snake, food)
 
 window.mainloop()
-
