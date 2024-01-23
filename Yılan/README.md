@@ -1,2 +1,2 @@
-Bu kod asıl kod ile aynı lakin üzerlerinde neyin neden yapıldığı yazıyor
+Arkadaşlar kodun rengini değiştirin boyutunu değiştirin renkleri değiştirin.
  
