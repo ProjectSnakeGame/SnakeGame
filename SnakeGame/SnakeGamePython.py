@@ -1,19 +1,19 @@
-
+# Program in Python to create a Snake Game
 import tkinter as Tk
 from tkinter import *
 import random
 
-
-WIDTH = 500
-HEIGHT = 500
-SPEED = 200
+# Initialising Dimensions of Game
+WIDTH = 750
+HEIGHT = 750
+SPEED = 150
 SPACE_SIZE = 20
-BODY_SIZE = 2
+BODY_SIZE = 3
 SNAKE = "#00FF00"
-FOOD = "#FFFFFF"
-BACKGROUND = "#000000"
+FOOD = "#0000FF"
+BACKGROUND = "#FFFFFF"
 
-
+# Class to design the snake
 class Snake:
 
 	def __init__(self):
@@ -30,7 +30,7 @@ class Snake:
 					fill=SNAKE, tag="snake")
 			self.squares.append(square)
 
-
+# Class to design the food
 class Food:
     def __init__(self):
         x = random.randint(0, (WIDTH // SPACE_SIZE) - 1) * SPACE_SIZE
@@ -42,7 +42,7 @@ class Food:
                             SPACE_SIZE, fill=FOOD, tag="food")
 
 
-
+# Function to check the next move of snake
 def next_turn(snake, food):
 
 	x, y = snake.coordinates[0]
@@ -90,7 +90,7 @@ def next_turn(snake, food):
 	else:
 		window.after(SPEED, next_turn, snake, food)
 
-
+# Function to control direction of snake
 def change_direction(new_direction):
 
 	global direction
@@ -108,7 +108,7 @@ def change_direction(new_direction):
 		if direction != 'up':
 			direction = new_direction
 
-
+# function to check snake's collision and position
 def check_collisions(snake):
 
 	x, y = snake.coordinates[0]
@@ -124,7 +124,7 @@ def check_collisions(snake):
 
 	return False
 
-
+# Function to control everything
 def game_over():
 
 	canvas.delete(ALL)
@@ -134,7 +134,7 @@ def game_over():
 					text="GAME OVER", fill="red",
 					tag="gameover")
 
-
+# Giving title to the gaming window
 
 
 window = Tk()
@@ -144,7 +144,7 @@ window.title(" Snake game ")
 score = 0
 direction = 'down'
 
-
+# Display of Points Scored in Game
 
 label = Label(window, text="Points:{}".format(score),
 			font=('consolas', 20))
