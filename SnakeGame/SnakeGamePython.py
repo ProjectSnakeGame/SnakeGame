@@ -2,8 +2,8 @@ import tkinter as Tk
 from tkinter import *
 import random
 
-WIDTH = 750
-HEIGHT = 750
+WIDTH = 500
+HEIGHT = 500
 SPEED = 150
 SPACE_SIZE = 20
 BODY_SIZE = 3
